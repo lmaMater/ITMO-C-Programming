@@ -1,6 +1,3 @@
-/* OPTIONS */
-
-
 int is_alpha(char current_char) {
     int char_code = (int) (current_char);
     if (char_code >= (int) ('a') && char_code <= (int) ('z')) {
@@ -33,12 +30,10 @@ int bytes(void *input_file) {
     int bytes_sum = 0;
     do {
         current_char = fgetc(input_file);
-        bytes_sum ++;
-        if (current_char == '\n') {
-            bytes_sum += 1;
-        }
+        bytes_sum += sizeof(current_char);
+
     } while (current_char != EOF);
-    return bytes_sum - 1;
+    return bytes_sum;
 }
 
 int lines(void *input_file) {
