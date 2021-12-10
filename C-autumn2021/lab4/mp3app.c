@@ -4,7 +4,12 @@
 #include "check.h"
 #include "struct.h"
 
-
+       __
+      /**\
+      \= / funny
+______/  \_ man__
+_____       _____
+    |{.}{.}|     
 int main(int argc, char *argv[]) {
     if (!(checkArgc(argc))) {
         return 1;
