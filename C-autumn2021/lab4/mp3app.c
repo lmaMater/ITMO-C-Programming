@@ -50,7 +50,7 @@ int main(int argc, char *argv[]) {
             fseek(header.file, frame.shift * sizeof(char), SEEK_CUR);
             int data_len = frame.size - frame.shift;
 
-            // Wxxx have no extra encoding byte
+            // Wxxx-type has no extra encoding byte
             if (frame.header[0] != 'W') {
                 frame.encoding = fgetc(header.file);
                 data_len -= 1;
